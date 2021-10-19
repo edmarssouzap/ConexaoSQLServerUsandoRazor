@@ -1,0 +1,14 @@
+Razor com SQL Server
+
+
+Este projeto foi criado para estudo da tecnologia Razor no C# conectando ao banco de dados da Microsoft SQL Server.
+
+
+Algumas fotos do banner não pertence ao autor desse projeto, mas aos proprietarios e responsáveis pelo site abaixo:
+
+http://www.autoescolashallon.com.br/
+
+Portanto, todas as imagens são de uso, autoria e cuidado de seus responsaveis e não do autor.
+
+
+2021 - Edmar

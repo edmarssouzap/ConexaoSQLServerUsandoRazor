@@ -1,0 +1,62 @@
+﻿@page
+@model AutoEscolaPeDeChumbo.Pages.Contato.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Criar</h1>
+
+<h4>Contato</h4>
+<hr />
+<form method="post">
+    <div class="row">
+        <div class="col-md-4">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Contato.Nome" class="control-label"></label>
+                <input asp-for="Contato.Nome" class="form-control" />
+                <span asp-validation-for="Contato.Nome" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="Contato.Telefone" class="control-label"></label>
+                <input asp-for="Contato.Telefone" class="form-control" />
+                <span asp-validation-for="Contato.Telefone" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="Contato.Email" class="control-label"></label>
+                <input asp-for="Contato.Email" class="form-control" />
+                <span asp-validation-for="Contato.Email" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label asp-for="Contato.Mensagem" class="control-label"></label>
+                <input asp-for="Contato.Mensagem" class="form-control" />
+                <span asp-validation-for="Contato.Mensagem" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>
+
+<div>
+    <a asp-page="Index">Voltar para a lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,58 @@
+﻿@page
+@model AutoEscolaPeDeChumbo.Pages.Treinamentos.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Editar</h1>
+
+<h4>Treinamento</h4>
+<hr />
+
+<form method="post">
+    <div class="row">
+        <div class="col-md-6">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Treinamento.ID" />
+
+            <div class="form-group">
+                <label asp-for="Treinamento.IDAluno" class="control-label"></label>
+                <input asp-for="Treinamento.IDAluno" class="form-control" />
+                <span asp-validation-for="Treinamento.IDAluno" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+
+            <div class="form-group">
+                <label asp-for="Treinamento.NomeTreinamento" class="control-label"></label>
+                <input asp-for="Treinamento.NomeTreinamento" class="form-control" />
+                <span asp-validation-for="Treinamento.NomeTreinamento" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="Treinamento.Aluno" class="control-label"></label>
+                <input asp-for="Treinamento.Aluno" class="form-control" />
+                <span asp-validation-for="Treinamento.Aluno" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+    </div>
+</form>
+
+
+<div>
+    <a asp-page="./Index">Voltar para a lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,65 @@
+﻿@page
+@model AutoEscolaPeDeChumbo.Pages.Alunos.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<p class="h1">Deletar</p>
+
+<p class="h3">Você quer deletar este cadastro?</p>
+
+<div>
+    <h4>Aluno</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Aluno.NomeAluno)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Aluno.NomeAluno)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Aluno.Cpf)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Aluno.Cpf)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Aluno.Idade)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Aluno.Idade)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Aluno.Telefone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Aluno.Telefone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Aluno.Endereco)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Aluno.Endereco)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Aluno.ValorTreinamento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Aluno.ValorTreinamento)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Aluno.FormaPagamento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Aluno.FormaPagamento)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Aluno.ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Voltar para a lista</a>
+    </form>
+</div>

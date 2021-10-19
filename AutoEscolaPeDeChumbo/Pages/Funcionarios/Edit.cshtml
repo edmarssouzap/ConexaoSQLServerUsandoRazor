@@ -1,0 +1,111 @@
+﻿@page
+@model AutoEscolaPeDeChumbo.Pages.Funcionarios.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Editar</h1>
+
+<h4>Funcionario</h4>
+<hr />
+
+<form method="post">
+    <div class="row">
+        <div class="col-md-6">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Funcionario.ID" />
+            <div class="form-group">
+                <label asp-for="Funcionario.Nome" class="control-label"></label>
+                <input asp-for="Funcionario.Nome" class="form-control" />
+                <span asp-validation-for="Funcionario.Nome" class="text-danger"></span>
+            </div>
+
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Funcionario.Cpf" class="control-label"></label>
+                <input asp-for="Funcionario.Cpf" class="form-control" />
+                <span asp-validation-for="Funcionario.Cpf" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Funcionario.Idade" class="control-label"></label>
+                <input asp-for="Funcionario.Idade" class="form-control" />
+                <span asp-validation-for="Funcionario.Idade" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Funcionario.Telefone" class="control-label"></label>
+                <input asp-for="Funcionario.Telefone" class="form-control" />
+                <span asp-validation-for="Funcionario.Telefone" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="Funcionario.Endereco" class="control-label"></label>
+                <input asp-for="Funcionario.Endereco" class="form-control" />
+                <span asp-validation-for="Funcionario.Endereco" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="Funcionario.Funcao" class="control-label"></label>
+                <input asp-for="Funcionario.Funcao" class="form-control" />
+                <span asp-validation-for="Funcionario.Funcao" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="Funcionario.Aluno" class="control-label"></label>
+                <input asp-for="Funcionario.Aluno" class="form-control" />
+                <span asp-validation-for="Funcionario.Aluno" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+
+            <div class="form-group">
+                <label asp-for="Funcionario.IDAluno" class="control-label"></label>
+                <input asp-for="Funcionario.IDAluno" class="form-control" />
+                <span asp-validation-for="Funcionario.IDAluno" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Funcionario.IDfuncao" class="control-label"></label>
+                <input asp-for="Funcionario.IDfuncao" class="form-control" />
+                <span asp-validation-for="Funcionario.IDfuncao" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+</form>
+
+<div>
+    <a asp-page="./Index">Voltar para a lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

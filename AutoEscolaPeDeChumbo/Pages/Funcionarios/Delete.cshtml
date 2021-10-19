@@ -1,0 +1,76 @@
+﻿@page
+@model AutoEscolaPeDeChumbo.Pages.Funcionarios.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Deletar</h1>
+
+<p class="h3">Você quer deletar este cadastro?</p>
+<div>
+    <h4>Funcionario</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Funcionario.Nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Funcionario.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Funcionario.Cpf)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Funcionario.Cpf)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Funcionario.Idade)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Funcionario.Idade)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Funcionario.Telefone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Funcionario.Telefone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Funcionario.Endereco)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Funcionario.Endereco)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Funcionario.IDfuncao)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Funcionario.IDfuncao)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Funcionario.Funcao)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Funcionario.Funcao)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Funcionario.IDAluno)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Funcionario.IDAluno)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Funcionario.Aluno)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Funcionario.Aluno)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Funcionario.ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Voltar para a lista</a>
+    </form>
+</div>

@@ -1,0 +1,61 @@
+﻿@page
+@model AutoEscolaPeDeChumbo.Pages.Alunos.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<p class="h1">Detalhes</p>
+
+<div>
+    <p class="h4">Aluno</p>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Aluno.NomeAluno)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Aluno.NomeAluno)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Aluno.Cpf)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Aluno.Cpf)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Aluno.Idade)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Aluno.Idade)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Aluno.Telefone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Aluno.Telefone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Aluno.Endereco)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Aluno.Endereco)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Aluno.ValorTreinamento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Aluno.ValorTreinamento)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Aluno.FormaPagamento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Aluno.FormaPagamento)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Aluno.ID">Editar</a> |
+    <a asp-page="./Index">Voltar para a lista</a>
+</div>

@@ -1,0 +1,40 @@
+﻿@page
+@model AutoEscolaPeDeChumbo.Pages.Funcoes.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<p class="h1">Deletar</p>
+
+<p class="h3">Você quer deletar este cadastro?</p>
+<div>
+    <h4>Funcao</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Funcao.NomeFuncao)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Funcao.NomeFuncao)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Funcao.IDFuncionario)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Funcao.IDFuncionario)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Funcao.Funcionario)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Funcao.Funcionario)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Funcao.ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Voltar para a lista</a>
+    </form>
+</div>

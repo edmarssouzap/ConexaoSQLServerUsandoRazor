@@ -1,0 +1,58 @@
+﻿@page
+@model AutoEscolaPeDeChumbo.Pages.Funcoes.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Criar Novo</h1>
+
+<h4>Funcao</h4>
+<hr />
+
+<form method="post">
+    <div class="row">
+        <div class="col-md-6">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Funcao.IDFuncionario" class="control-label"></label>
+                <input asp-for="Funcao.IDFuncionario" class="form-control" />
+                <span asp-validation-for="Funcao.IDFuncionario" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Funcao.NomeFuncao" class="control-label"></label>
+                <input asp-for="Funcao.NomeFuncao" class="form-control" />
+                <span asp-validation-for="Funcao.NomeFuncao" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Funcao.Funcionario" class="control-label"></label>
+                <input asp-for="Funcao.Funcionario" class="form-control" />
+                <span asp-validation-for="Funcao.Funcionario" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>
+
+
+<div>
+    <a asp-page="Index">Voltar para a lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
